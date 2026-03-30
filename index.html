@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СМУЗИ РАН</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="game-container">
+        <section class="hero hero--title">
+            <img src="images/zagolovok1.png" alt="Смузи Ран - правила игры" class="hero__image">
+        </section>
+
+        <section class="top-row">
+            <div class="counter">
+                <img src="images/zagolovok2.png" alt="Прилавок">
+            </div>
+
+            <div class="blender blender--title">
+                <img src="images/zagolovok4.png" alt="Блендер">
+            </div>
+        </section>
+
+        <section class="play-area" id="stage">
+            <!-- ЛАБИРИНТ (слева) -->
+            <div class="labyrinth" id="playfield">
+                <img
+                    src="images/labirinth.png"
+                    alt="Лабиринт"
+                    id="mazeImage"
+                    class="labyrinth__image"
+                >
+            </div>
+
+            <!-- КЛУБНИКА (слева, под прилавком) -->
+            <div class="basket strawberry" id="strawberry">
+                <img
+                    src="images/strawberry.png"
+                    alt="Клубника"
+                    id="strawberryImage"
+                    draggable="false"
+                >
+            </div>
+
+            <!-- ПРАВИЛА -->
+            <div class="rules">
+                <img src="images/zagolovok3.png" alt="Правила">
+            </div>
+
+            <!-- КОРЗИНА (справа) -->
+            <div class="blender blender--game">
+                <img
+                    src="images/basket1.png"
+                    alt="Корзина"
+                    id="basketImage"
+                >
+            </div>
+        </section>
+
+        <div class="bonus-rules">
+            <img src="images/rules1.png" alt="Правила бонусной игры">
+        </div>
+
+        <div class="bonus-ticket">
+            <img
+                src=""
+                alt="Выигрышный билет"
+                id="ticketResult"
+                class="bonus-ticket__image"
+                hidden
+            >
+        </div>
+
+        <button type="button" class="bonus-jackpot" id="jackpotButton" aria-label="Открыть случайный билет">
+            <img src="images/jackpot.png" alt="Джекпот">
+        </button>
+
+        <div class="bonus-counter">
+            <img src="images/prilavok2.png" alt="Прилавок">
+        </div>
+
+        <div class="scratch-card scratch-card--1" data-overlay="images/noname1.png">
+            <img src="images/orange.png" alt="Апельсин" class="scratch-card__prize">
+            <canvas class="scratch-card__cover"></canvas>
+        </div>
+
+        <div class="scratch-card scratch-card--2" data-overlay="images/noname2.png">
+            <img src="images/pineapple.png" alt="Ананас" class="scratch-card__prize">
+            <canvas class="scratch-card__cover"></canvas>
+        </div>
+
+        <div class="scratch-card scratch-card--3" data-overlay="images/noname3.png">
+            <img src="images/banan.png" alt="Банан" class="scratch-card__prize">
+            <canvas class="scratch-card__cover"></canvas>
+        </div>
+
+        <div class="scratch-card scratch-card--4" data-overlay="images/noname4.png">
+            <img src="images/klubnika.png" alt="Клубника" class="scratch-card__prize">
+            <canvas class="scratch-card__cover"></canvas>
+        </div>
+
+        <div class="scratch-rules">
+            <img src="images/rule3.png" alt="Правила стираемой игры">
+        </div>
+
+        <div class="puzzle-frame">
+            <img src="images/pazzle.png" alt="Рамка пазла">
+        </div>
+
+        <img src="images/kiwi.png" alt="Киви" class="puzzle-piece puzzle-piece--kiwi" draggable="false">
+        <img src="images/watermellon.png" alt="Арбуз" class="puzzle-piece puzzle-piece--watermellon" draggable="false">
+        <img src="images/cherry.png" alt="Вишня" class="puzzle-piece puzzle-piece--cherry" draggable="false">
+        <img src="images/ananasik.png" alt="Ананас" class="puzzle-piece puzzle-piece--ananasik" draggable="false">
+
+        <div class="recipe-rules">
+            <img src="images/rule4.png" alt="Правила выбора чаши">
+        </div>
+
+        <div class="recipe-panel">
+            <img src="images/rectanglee.png" alt="Панель выбора ингредиентов" class="recipe-panel__background">
+            <img src="images/boal.png" alt="Чаша" class="recipe-panel__bowl" id="recipeBowl">
+
+            <button type="button" class="recipe-button recipe-button--klubnika" data-bowl="images/boalmain1.png" aria-label="Клубника">
+                <img src="images/klubnika2.png" alt="Клубника">
+            </button>
+
+            <button type="button" class="recipe-button recipe-button--blueberry" data-bowl="images/boalmain2.png" aria-label="Черника">
+                <img src="images/blueberry.png" alt="Черника">
+            </button>
+
+            <button type="button" class="recipe-button recipe-button--banana" data-bowl="images/boalmain3.png" aria-label="Банан">
+                <img src="images/banana2.png" alt="Банан">
+            </button>
+
+            <button type="button" class="recipe-button recipe-button--kiwi2" data-bowl="images/boalmain.png" aria-label="Киви">
+                <img src="images/kiwi2.png" alt="Киви">
+            </button>
+        </div>
+
+        <div class="project-footer project-footer--left">
+            <img src="images/podval.png" alt="Подвал слева">
+        </div>
+
+        <div class="project-footer project-footer--right">
+            <img src="images/podval2.png" alt="Подвал справа">
+        </div>
+    </main>
+
+    <canvas id="mazeMask" hidden></canvas>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
